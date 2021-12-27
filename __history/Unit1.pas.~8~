@@ -1,0 +1,590 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.MPlayer;
+
+type
+  TForm1 = class(TForm)
+    BtnSair: TButton;
+    BtnSort: TButton;
+    BtnB: TButton;
+    Label1: TLabel;
+    BtnI: TButton;
+    BtnP: TButton;
+    BtnA: TButton;
+    BtnH: TButton;
+    BtnO: TButton;
+    BtnV: TButton;
+    BtnQ: TButton;
+    BtnJ: TButton;
+    BtnW: TButton;
+    BtnR: TButton;
+    BtnS: TButton;
+    BtnC: TButton;
+    BtnK: TButton;
+    BtnL: TButton;
+    BtnM: TButton;
+    BtnN: TButton;
+    BtnD: TButton;
+    BtnE: TButton;
+    BtnF: TButton;
+    BtnG: TButton;
+    BtnT: TButton;
+    BtnU: TButton;
+    BtnX: TButton;
+    BtnY: TButton;
+    BtnZ: TButton;
+    MediaPlayer1: TMediaPlayer;
+    Edit1: TEdit;
+    Button1: TButton;
+    procedure BtnSairClick(Sender: TObject);
+    procedure BtnSortClick(Sender: TObject);
+    function aleatorio: integer;
+    function verifica(letra: string): Boolean;
+    procedure BtnAClick(Sender: TObject);
+    procedure BtnBClick(Sender: TObject);
+    procedure BtnCClick(Sender: TObject);
+    procedure BtnDClick(Sender: TObject);
+    procedure BtnEClick(Sender: TObject);
+    procedure BtnFClick(Sender: TObject);
+    procedure BtnGClick(Sender: TObject);
+    procedure BtnHClick(Sender: TObject);
+    procedure BtnIClick(Sender: TObject);
+    procedure BtnJClick(Sender: TObject);
+    procedure BtnKClick(Sender: TObject);
+    procedure BtnLClick(Sender: TObject);
+    procedure BtnMClick(Sender: TObject);
+    procedure BtnNClick(Sender: TObject);
+    procedure BtnOClick(Sender: TObject);
+    procedure BtnPClick(Sender: TObject);
+    procedure BtnQClick(Sender: TObject);
+    procedure BtnRClick(Sender: TObject);
+    procedure BtnSClick(Sender: TObject);
+    procedure BtnTClick(Sender: TObject);
+    procedure BtnUClick(Sender: TObject);
+    procedure BtnVClick(Sender: TObject);
+    procedure BtnWClick(Sender: TObject);
+    procedure BtnXClick(Sender: TObject);
+    procedure BtnYClick(Sender: TObject);
+    procedure BtnZClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+  indice: array[0..25] of String = ('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z');
+  numero: integer;
+implementation
+
+{$R *.dfm}
+
+function TForm1.aleatorio;
+begin
+  Result := Random(25);
+end;
+
+function TForm1.verifica(letra: string): Boolean;
+begin
+  if letra = Label1.Caption then
+  begin
+    Result := True
+  end
+  else
+  begin
+    Result := False
+  end;
+end;
+
+procedure TForm1.BtnSortClick(Sender: TObject);
+var alt: integer;
+begin
+  Label1.Caption := indice[aleatorio];
+end;
+
+procedure TForm1.BtnTClick(Sender: TObject);
+begin
+if verifica(BtnT.Caption) = True then
+ begin
+  ShowMessage('Acertou Mizerávi');
+  //toca a música de acerto
+  //adiciona mais um ponto ao score
+ end
+ else
+ begin
+  ShowMessage('Errou, disgraça');
+  //toca música de erro
+  //adiciona mais um erro no score
+ end;
+end;
+
+procedure TForm1.BtnUClick(Sender: TObject);
+begin
+if verifica(BtnU.Caption) = True then
+ begin
+  ShowMessage('acertou');
+  //toca a música de acerto
+  //adiciona mais um ponto ao score
+ end
+ else
+ begin
+  ShowMessage('errou');
+  //toca música de erro
+  //adiciona mais um erro no score
+ end;
+end;
+
+procedure TForm1.BtnVClick(Sender: TObject);
+begin
+if verifica(BtnV.Caption) = True then
+ begin
+  ShowMessage('acertou');
+  //toca a música de acerto
+  //adiciona mais um ponto ao score
+ end
+ else
+ begin
+  ShowMessage('errou');
+  //toca música de erro
+  //adiciona mais um erro no score
+ end;
+end;
+
+procedure TForm1.BtnWClick(Sender: TObject);
+begin
+if verifica(BtnW.Caption) = True then
+ begin
+  ShowMessage('acertou');
+  //toca a música de acerto
+  //adiciona mais um ponto ao score
+ end
+ else
+ begin
+  ShowMessage('errou');
+  //toca música de erro
+  //adiciona mais um erro no score
+ end;
+end;
+
+procedure TForm1.BtnXClick(Sender: TObject);
+begin
+if verifica(BtnX.Caption) = True then
+ begin
+  ShowMessage('acertou');
+  //toca a música de acerto
+  //adiciona mais um ponto ao score
+ end
+ else
+ begin
+  ShowMessage('errou');
+  //toca música de erro
+  //adiciona mais um erro no score
+ end;
+end;
+
+procedure TForm1.BtnYClick(Sender: TObject);
+begin
+if verifica(BtnY.Caption) = True then
+ begin
+  ShowMessage('acertou');
+  //toca a música de acerto
+  //adiciona mais um ponto ao score
+ end
+ else
+ begin
+  ShowMessage('errou');
+  //toca música de erro
+  //adiciona mais um erro no score
+ end;
+end;
+
+procedure TForm1.BtnZClick(Sender: TObject);
+begin
+if verifica(BtnZ.Caption) = True then
+ begin
+  ShowMessage('acertou');
+  //toca a música de acerto
+  //adiciona mais um ponto ao score
+ end
+ else
+ begin
+  ShowMessage('errou');
+  //toca música de erro
+  //adiciona mais um erro no score
+ end;
+end;
+
+procedure TForm1.Button1Click(Sender: TObject);       //APAGAR ISSO AQUI
+begin
+Edit1.Text := MediaPlayer1.FileName;
+end;
+
+procedure TForm1.BtnAClick(Sender: TObject);
+begin
+ if verifica(BtnA.Caption) = True then
+ begin
+  ShowMessage('acertou');
+  //toca a música de acerto
+  //adiciona mais um ponto ao score(chama a função)
+ end
+ else
+ begin
+  //ShowMessage('errou');
+  MediaPlayer1.Open;
+  MediaPlayer1.FileName := ExtractFilePath(Application.ExeName) + 'sounds\m.mp3';
+  MediaPlayer1.Open;
+  MediaPlayer1.Play;
+  //toca música de erro
+  //adiciona mais um erro no score(chama a função)
+ end;
+end;
+
+procedure TForm1.BtnBClick(Sender: TObject);
+begin
+if verifica(BtnB.Caption) = True then
+ begin
+  ShowMessage('acertou');
+  //toca a música de acerto
+  //adiciona mais um ponto ao score
+ end
+ else
+ begin
+  ShowMessage('errou');
+  //toca música de erro
+  //adiciona mais um erro no score
+ end;
+
+end;
+
+procedure TForm1.BtnCClick(Sender: TObject);
+begin
+if verifica(BtnC.Caption) = True then
+ begin
+  ShowMessage('acertou');
+  //toca a música de acerto
+  //adiciona mais um ponto ao score
+ end
+ else
+ begin
+  ShowMessage('errou');
+  //toca música de erro
+  //adiciona mais um erro no score
+ end;
+end;
+
+procedure TForm1.BtnDClick(Sender: TObject);
+begin
+if verifica(BtnD.Caption) = True then
+ begin
+  ShowMessage('acertou');
+  //toca a música de acerto
+  //adiciona mais um ponto ao score
+ end
+ else
+ begin
+  ShowMessage('errou');
+  //toca música de erro
+  //adiciona mais um erro no score
+ end;
+end;
+
+procedure TForm1.BtnEClick(Sender: TObject);
+begin
+if verifica(BtnE.Caption) = True then
+ begin
+  ShowMessage('acertou');
+  //toca a música de acerto
+  //adiciona mais um ponto ao score
+ end
+ else
+ begin
+  ShowMessage('errou');
+  //toca música de erro
+  //adiciona mais um erro no score
+ end;
+end;
+
+procedure TForm1.BtnFClick(Sender: TObject);
+begin
+if verifica(BtnF.Caption) = True then
+ begin
+  ShowMessage('acertou');
+  //toca a música de acerto
+  //adiciona mais um ponto ao score
+ end
+ else
+ begin
+  ShowMessage('errou');
+  //toca música de erro
+  //adiciona mais um erro no score
+ end;
+end;
+
+procedure TForm1.BtnGClick(Sender: TObject);
+begin
+if verifica(BtnG.Caption) = True then
+ begin
+  ShowMessage('acertou');
+  //toca a música de acerto
+  //adiciona mais um ponto ao score
+ end
+ else
+ begin
+  ShowMessage('errou');
+  //toca música de erro
+  //adiciona mais um erro no score
+ end;
+end;
+
+procedure TForm1.BtnHClick(Sender: TObject);
+begin
+if verifica(BtnH.Caption) = True then
+ begin
+  ShowMessage('acertou');
+  //toca a música de acerto
+  //adiciona mais um ponto ao score
+ end
+ else
+ begin
+  ShowMessage('errou');
+  //toca música de erro
+  //adiciona mais um erro no score
+ end;
+end;
+
+procedure TForm1.BtnIClick(Sender: TObject);
+begin
+if verifica(BtnI.Caption) = True then
+ begin
+  ShowMessage('acertou');
+  //toca a música de acerto
+  //adiciona mais um ponto ao score
+ end
+ else
+ begin
+  ShowMessage('errou');
+  //toca música de erro
+  //adiciona mais um erro no score
+ end;
+end;
+
+procedure TForm1.BtnJClick(Sender: TObject);
+begin
+if verifica(BtnJ.Caption) = True then
+ begin
+  ShowMessage('acertou');
+  //toca a música de acerto
+  //adiciona mais um ponto ao score
+ end
+ else
+ begin
+  ShowMessage('errou');
+  //toca música de erro
+  //adiciona mais um erro no score
+ end;
+end;
+
+procedure TForm1.BtnKClick(Sender: TObject);
+begin
+if verifica(BtnK.Caption) = True then
+ begin
+  ShowMessage('acertou');
+  //toca a música de acerto
+  //adiciona mais um ponto ao score
+ end
+ else
+ begin
+  ShowMessage('errou');
+  //toca música de erro
+  //adiciona mais um erro no score
+ end;
+end;
+
+procedure TForm1.BtnLClick(Sender: TObject);
+begin
+if verifica(BtnL.Caption) = True then
+ begin
+  ShowMessage('acertou');
+  //toca a música de acerto
+  //adiciona mais um ponto ao score
+ end
+ else
+ begin
+  ShowMessage('errou');
+  //toca música de erro
+  //adiciona mais um erro no score
+ end;
+end;
+
+procedure TForm1.BtnMClick(Sender: TObject);
+begin
+if verifica(BtnM.Caption) = True then
+ begin
+  ShowMessage('acertou');
+  //toca a música de acerto
+  //adiciona mais um ponto ao score
+ end
+ else
+ begin
+  ShowMessage('errou');
+  //toca música de erro
+  //adiciona mais um erro no score
+ end;
+end;
+
+procedure TForm1.BtnNClick(Sender: TObject);
+begin
+if verifica(BtnN.Caption) = True then
+ begin
+  ShowMessage('acertou');
+  //toca a música de acerto
+  //adiciona mais um ponto ao score
+ end
+ else
+ begin
+  ShowMessage('errou');
+  //toca música de erro
+  //adiciona mais um erro no score
+ end;
+end;
+
+procedure TForm1.BtnOClick(Sender: TObject);
+begin
+if verifica(BtnO.Caption) = True then
+ begin
+  ShowMessage('acertou');
+  //toca a música de acerto
+  //adiciona mais um ponto ao score
+ end
+ else
+ begin
+  ShowMessage('errou');
+  //toca música de erro
+  //adiciona mais um erro no score
+ end;
+end;
+
+procedure TForm1.BtnPClick(Sender: TObject);
+begin
+if verifica(BtnP.Caption) = True then
+ begin
+  ShowMessage('acertou');
+  //toca a música de acerto
+  //adiciona mais um ponto ao score
+ end
+ else
+ begin
+  ShowMessage('errou');
+  //toca música de erro
+  //adiciona mais um erro no score
+ end;
+end;
+
+procedure TForm1.BtnQClick(Sender: TObject);
+begin
+if verifica(BtnQ.Caption) = True then
+ begin
+  ShowMessage('acertou');
+  //toca a música de acerto
+  //adiciona mais um ponto ao score
+ end
+ else
+ begin
+  ShowMessage('errou');
+  //toca música de erro
+  //adiciona mais um erro no score
+ end;
+end;
+
+procedure TForm1.BtnRClick(Sender: TObject);
+begin
+if verifica(BtnR.Caption) = True then
+ begin
+  ShowMessage('acertou');
+  //toca a música de acerto
+  //adiciona mais um ponto ao score
+ end
+ else
+ begin
+  ShowMessage('errou');
+  //toca música de erro
+  //adiciona mais um erro no score
+ end;
+end;
+
+procedure TForm1.BtnSairClick(Sender: TObject);
+begin
+  Application.Terminate;
+end;
+procedure TForm1.BtnSClick(Sender: TObject);
+begin
+if verifica(BtnS.Caption) = True then
+ begin
+  ShowMessage('acertou');
+  //toca a música de acerto
+  //adiciona mais um ponto ao score
+ end
+ else
+ begin
+  ShowMessage('errou');
+  //toca música de erro
+  //adiciona mais um erro no score
+ end;
+end;
+
+end.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+Ao abrir o programa, teremos que apertar o botao iniciar
+(também haverá o botao pausar e sair)
+
+O programa vai gerar um numero aleatório que vai er usado como indice para os números e letras
+
+O programa vai tocar o som correspondente a letra e o usuário deve clicar na letra
+
+  Se a letra for certa, vai tocar um som e vai contabilizar acerto
+
+  Se a letra for errada, vai tocar um som e vai contabilizar um erro
+
+    Vai recomeçar após 5 segundos
+
+
+
+
+
+
+
+
+
+
+}
